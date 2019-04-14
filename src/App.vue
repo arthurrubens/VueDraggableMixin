@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <Panel
+        title="Sample Panel"
+      >
+        <form class="form">
+          <label for="inputFirstName">First name:</label>
+          <input type="text" name="firstname" id="inputFirstName" class="inputField"><br>
+          <label for="inputFirstName">Last name:</label>
+          <input type="text" name="lastname" id="inputLastName" class="inputField">
+        </form>
+      </Panel>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Panel from './components/Panel'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Panel
   }
 }
 </script>
@@ -23,6 +31,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inputField {
+  width: calc(100% - 5px);
 }
 </style>
