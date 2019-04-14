@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <Panel
-        title="Sample Panel"
+        title="Draggable Window"
       >
         <form class="form">
           <label for="inputFirstName">First name:</label>

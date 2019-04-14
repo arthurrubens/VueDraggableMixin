@@ -1,7 +1,7 @@
 <template>
   <div class="panelWrapper">
     <Header
-      title="Draggable Window"
+      :title="title"
       @mousedown.native="onMouseDown"
     />
     <Body>
@@ -24,7 +24,9 @@ export default {
     Body
   },
 
-  props: {},
+  props: {
+    title: String
+  },
   
   data: function() {
     return {}
